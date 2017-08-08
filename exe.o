@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+for i in *.sh
+do 
+  filename=${i%.*} 
+  ls -l ${filename}
+  mv ${filename} tmp
+  chmod +x tmp/${filename}
+  ls -l tmp/${filename}
+done
